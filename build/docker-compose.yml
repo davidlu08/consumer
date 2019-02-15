@@ -1,0 +1,9 @@
+version: '3'
+services:
+  php-fpm:
+    build: php
+    image: consumer/php-fpm7
+    container_name: consumer-php-fpm7
+    volumes:
+      - ../:/var/www/html
+      - ./php/php-ini.production:/usr/local/etc/php/php.ini
